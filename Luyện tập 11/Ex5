@@ -1,0 +1,8 @@
+d = {"36": 1, "rau má": 2, "2 ngón": 3}
+
+key = input("Nhập key cần kiểm tra: ")
+
+if key in d:
+    print("Key tồn tại")
+else:
+    print("Key không tồn tại")
