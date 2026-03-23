@@ -1,0 +1,10 @@
+n = int(input("Nhập số người: "))
+data = {}
+
+for i in range(n):
+    name = input("Tên: ")
+    age = int(input("Tuổi: "))
+    data[name] = age
+
+avg_age = sum(data.values()) / len(data)
+print("Tuổi trung bình:", avg_age)
