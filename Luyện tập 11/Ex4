@@ -1,0 +1,31 @@
+import math
+
+lst = [1, 2, 3, 4, 5]
+
+x = int(input("Nhập phần tử cần thêm: "))
+lst.append(x)
+
+
+k = int(input("Nhập giá trị k: "))
+print("Số lần xuất hiện:", lst.count(k))
+
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+prime_sum = sum(x for x in lst if is_prime(x))
+print("Tổng số nguyên tố:", prime_sum)
+
+
+lst.sort()
+print("Danh sách sau khi sắp xếp:", lst)
+
+
+lst.clear()
+print("Danh sách sau khi xóa:", lst)
